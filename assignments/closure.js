@@ -1,7 +1,7 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 function sayHello(name) {
-  var text = 'Hello ' + name;
+  var text = 'Hey there, my name is ' + name;
   var say = function() { console.log(text); }
   say();
 }
