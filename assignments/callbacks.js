@@ -37,14 +37,7 @@ getLength(items, console.log);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function last(arr, cb) {
-  // last passes the last item of the array into the callback.
 
-  return cb(arr.length);
-}
-
-// Function invocation 
-last(console.log);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -64,30 +57,27 @@ sumNums(items, function(first) {
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+let multiply = x * y;
+cb(multiply);
 }
-function multiplyNums(arr, cb) {
-  return cb(arr[0]);
-}
-
-// Function invocation 
-multiplyNums(items, function(first) {
-  console.log(first)
+  multiplyNums(5, 10, (numMultiply) => {
+  console.log(numMultiply);
 });
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function contains(item, list, cb) {
+function contains(items, object, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
-function contains(arr, cb) {
-  return cb(arr[0]);
-}
+
+  return items.indexOf(object) > -1;
+
 
 // Function invocation 
-contains(items, function(first) {
-  console.log(first)
-});
+
+}
+  console.log(contains(items, 'pencil'));
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
