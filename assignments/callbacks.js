@@ -24,27 +24,62 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 */
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function getLength(arr, cb) {
+
   // getLength passes the length of the array into the callback.
+function getLength(arr, cb) {
+  return cb(arr.length);
 }
 
-function last(arr, cb) {
-  // last passes the last item of the array into the callback.
-}
+// Function invocation 
+getLength(items, console.log);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
+function sumNums(arr, cb) {
+  return cb(arr[0]);
+}
+
+// Function invocation 
+sumNums(items, function(first) {
+  console.log(first)
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+let multiply = x * y;
+cb(multiply);
 }
+  multiplyNums(5, 10, (numMultiply) => {
+  console.log(numMultiply);
+});
 
-function contains(item, list, cb) {
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function contains(items, object, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+
+  return items.indexOf(object) > -1;
+
+
+// Function invocation 
+
 }
+  console.log(contains(items, 'pencil'));
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* STRETCH PROBLEM */
 
